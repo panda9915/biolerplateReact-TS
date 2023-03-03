@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { Landing as LandingLayout } from "../../layouts";
 import { useLoader } from "../../hooks";
+import { Input } from 'antd';
 
 interface IProps {}
 

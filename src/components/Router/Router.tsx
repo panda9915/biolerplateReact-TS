@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { withCheckAuthorization } from "../../hocs";
 import * as Page from "../../pages";
 
@@ -9,7 +9,7 @@ const PageProfileWithCheckAuthorization = withCheckAuthorization(Page.Profile);
 const PageMainWithCheckAuthorization = withCheckAuthorization(Page.Main);
 export const Router: FC<IProps> = (props: IProps): JSX.Element => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Page.Home />} />
         <Route path="/sign-in" element={<Page.SignIn />} />
@@ -18,6 +18,6 @@ export const Router: FC<IProps> = (props: IProps): JSX.Element => {
         <Route path="/main" element={<PageMainWithCheckAuthorization />} />
         <Route path="*" element={<Page.NotFound />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
