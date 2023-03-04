@@ -1,36 +1,68 @@
 @import "variables";
-
-*, ::before, ::after {
-  box-sizing: border-box;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-}
+@import "reset";
 
 body {
-  font-family: -apple-system,
-  BlinkMacSystemFont,
-  "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-  sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: $primary-font;
+    font-size: $paragraph-size;
+    color: $primary-color;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -moz-font-feature-settings: "kern";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-body::-webkit-scrollbar {
-  display: none;
+h1,
+h2,
+h3,
+h4,
+h5 {
+    word-break: break-word;
+    font-style: normal;
+    text-decoration: none;
+    margin: $spacing-small 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+h1 {
+    font-size: $h1-size;
 }
 
-div#root {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-  font-family: Manrope, sans-serif;
+h2 {
+    font-size: $h2-size;
+}
+
+h3 {
+    font-size: $h3-size;
+}
+
+h4 {
+    font-size: $h4-size;
+}
+
+h5 {
+    font-size: $h5-size;
+}
+
+@media only screen and (max-width: $screen-table) {
+    h1 {
+        font-size: $h1-size-m;
+    }
+
+    h2 {
+        font-size: $h2-size-m;
+    }
+
+    h3 {
+        font-size: $h3-size-m;
+    }
+
+    h4 {
+        font-size: $h4-size-m;
+    }
+
+    h5 {
+        font-size: $h5-size-m;
+    }
 }
